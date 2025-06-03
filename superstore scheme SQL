@@ -1,3 +1,5 @@
+#This project utilizes the following Superstore data: 
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -27,3 +29,55 @@ VALUES
     
     
 -- © Copyright 2025 Break Into Tech  --
+
+
+prompt #1
+
+Write a SQL query that orders the items by price.
+
+SELECT *
+FROM superstore;
+
+SELECT price, category, item_name
+FROM superstore
+ORDER BY price DESC;
+
+prompt #2
+
+Write your own SQL query that will show a statistic about the item prices, like a sum, average, minimum, maximum, or count.
+
+SELECT category, AVG(price) avg_price
+FROM superstore
+GROUP BY category
+ORDER BY avg_price;
+
+Prompt #3
+
+Write your own SQL query that will show a statistic about the price for items in the category of "Kitchen Supplies".
+
+SELECT SUM(price) total_price, category
+FROM superstore
+WHERE category = 'Kitchen Supplies';
+
+Prompt #4
+
+What is the average price for appliances?
+
+SELECT AVG(price)
+FROM superstore
+WHERE category='Appliances';
+
+
+How many memory foam mattresses are in stock?
+
+SELECT stock_quantity, item_name
+FROM superstore
+WHERE item_name='Memory Foam Mattress';
+
+How much does the cutlery set cost?
+
+SELECT price, item_name
+FROM superstore
+WHERE item_name='Cutlery Set';
+
+
