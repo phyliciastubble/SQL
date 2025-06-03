@@ -31,6 +31,9 @@ VALUES
 -- © Copyright 2025 Break Into Tech  --
 
 
+#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
+
+
 prompt #1
 
 Write a SQL query that orders the items by price.
